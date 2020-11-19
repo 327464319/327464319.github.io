@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"327464319.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://327464319.github.io/index.html">
@@ -12,146 +27,665 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
+<link rel="canonical" href="https://327464319.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Hexo</title>
   
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
 
-  
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
-<meta name="generator" content="Hexo 5.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <div class="widget-wrap mobile-header">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
-    <h2 class="author">John Doe</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
-        <section id="main">
-  
-    <article id="post-我的第一次" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1/" class="article-date">
-  <time class="post-time" datetime="2019-11-05T02:22:33.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">05</span>
-  </time>
-</a>
-   
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1/">我的第一次</a>
-    </h1>
-  
 
-        <div>
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
           
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2020/01/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
-              
+            <a href="/2020/01/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F04/" class="post-title-link" itemprop="url">小程序01</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-06 10:22:33" itemprop="dateCreated datePublished" datetime="2020-01-06T10:22:33+08:00">2020-01-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 19:08:54" itemprop="dateModified" datetime="2020-11-19T19:08:54+08:00">2020-11-19</time>
+              </span>
 
           
+
         </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        
+          <h1 id="小程序-Day04-总结"><a href="#小程序-Day04-总结" class="headerlink" title="小程序-Day04 总结"></a>小程序-Day04 总结</h1><h2 id="wxs-外联方式（⭐⭐）"><a href="#wxs-外联方式（⭐⭐）" class="headerlink" title="wxs 外联方式（⭐⭐）"></a>wxs 外联方式（⭐⭐）</h2><ol>
+<li><p>创建一个文件，后缀名是 .wxs, 通过 module.exports 对外进行函数或者是遍历的导出</p>
+</li>
+<li><p>在需要使用这个 wxs 的 wxml 页面中，通过 wxs 标签进行引入</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wxs</span> <span class="attr">src</span>=<span class="string">&quot;文件地址&quot;</span> <span class="attr">module</span>=<span class="string">&quot;m1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">wxs</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>外链的方式用的比较多，复用性更强</p>
+<h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><h3 id="基本使用（⭐⭐⭐）"><a href="#基本使用（⭐⭐⭐）" class="headerlink" title="基本使用（⭐⭐⭐）"></a>基本使用（⭐⭐⭐）</h3><ol>
+<li>创建自定义组件<br>① 根目录创建一个 components 文件夹<br>② 借助小程序工具，右键创建 component</li>
+<li>在页面中引入自定义组件<br>① 全局引入： 在 app.json 文件中，跟 window 节点同级，声明一个 usingComponents 节点，通过 key value 的形式配置，key 就代表使用的标签名，value 就是自定义组件的路径<br>② 局部引入： 在对应页面的 json 文件中，声明一个 usingComponents 节点，通过 key value 的形式配置，key 就代表使用的标签名，value 就是自定义组件的路径</li>
+</ol>
+<h3 id="样式（⭐⭐）"><a href="#样式（⭐⭐）" class="headerlink" title="样式（⭐⭐）"></a>样式（⭐⭐）</h3><p>自定义组件的样式默认是 私有的， 外界的类选择器不会影响到组件内部，组件内部的样式也不会影响到外界</p>
+<p>如果有需求，可以去修改这个配置项：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Component(&#123;</span><br><span class="line">    options: &#123;</span><br><span class="line">        <span class="comment">// isolated 隔离</span></span><br><span class="line">        <span class="comment">// apply-shared 单项影响，页面能够影响组件</span></span><br><span class="line">        <span class="comment">// shared 双向影响</span></span><br><span class="line">        styleIsolation: <span class="string">&#x27;shared&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义组件属性，方法（⭐⭐⭐）"><a href="#自定义组件属性，方法（⭐⭐⭐）" class="headerlink" title="自定义组件属性，方法（⭐⭐⭐）"></a>自定义组件属性，方法（⭐⭐⭐）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 名字叫做 test</span></span><br><span class="line"> Component(&#123;</span><br><span class="line">     data: &#123;</span><br><span class="line">         <span class="comment">// 定义私有数据的</span></span><br><span class="line">     &#125;,</span><br><span class="line">     properties: &#123;</span><br><span class="line">         <span class="comment">// 定义外部传入的数据， vue中 props 类似</span></span><br><span class="line">         count: &#123;</span><br><span class="line">             type: <span class="built_in">Number</span>; <span class="comment">//指定类型</span></span><br><span class="line">             value: <span class="number">0</span> <span class="comment">// 指定默认值</span></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods: &#123;</span><br><span class="line">        <span class="comment">// 主要定义组件里面的事件函数或者是自定义函数</span></span><br><span class="line">     &#125;</span><br><span class="line"> &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在外界使用的时候，把值传递给组件内部</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">test</span> <span class="attr">count</span>=<span class="string">&quot;0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">test</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>结论：<br>data 和 properties 指向的同一个对象， 我们就可以通过 this.setData() 来进行统一的数据的更新<br>注意： 我们一般情况下都不会去修改 properties 的值</p>
+<h3 id="监听器（⭐⭐）"><a href="#监听器（⭐⭐）" class="headerlink" title="监听器（⭐⭐）"></a>监听器（⭐⭐）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Component(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        num: <span class="number">0</span>,</span><br><span class="line">        obj:&#123;</span><br><span class="line">            name: <span class="string">&#x27;ww&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    observers: &#123;</span><br><span class="line">       <span class="string">&#x27;num&#x27;</span>:<span class="function"><span class="keyword">function</span>(<span class="params">newValue</span>)</span>&#123;</span><br><span class="line">           <span class="comment">// 只要外界修改了num的值，就会触发这个函数，newValue就是最新的值</span></span><br><span class="line">       &#125;,</span><br><span class="line">       <span class="string">&#x27;obj.**&#x27;</span>: <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">           <span class="comment">// 监听obj里面所有的属性，只要任何一个属性修改了，就会触发这个函数，obj就是最新的数据</span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://327464319.github.io/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1/" data-id="ckh4athc60001i8tc8fc6cfmg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-
-  
-    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/04/hello-world/" class="article-date">
-  <time class="post-time" datetime="2019-11-04T15:22:33.000Z" itemprop="datePublished">
-    <span class="post-month">11月</span><br/>
-    <span class="post-day">04</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2020/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
-          
-              
+            <a href="/2020/01/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F03/" class="post-title-link" itemprop="url">小程序01</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-04 10:22:33" itemprop="dateCreated datePublished" datetime="2020-01-04T10:22:33+08:00">2020-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 19:08:44" itemprop="dateModified" datetime="2020-11-19T19:08:44+08:00">2020-11-19</time>
+              </span>
 
           
+
         </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <h1 id="小程序-Day03-总结"><a href="#小程序-Day03-总结" class="headerlink" title="小程序-Day03 总结"></a>小程序-Day03 总结</h1><h2 id="网络请求（⭐⭐⭐）"><a href="#网络请求（⭐⭐⭐）" class="headerlink" title="网络请求（⭐⭐⭐）"></a>网络请求（⭐⭐⭐）</h2><p>小程序中对网络请求校验是非常严格的，请求的协议必须是 https 协议<br>域名需要在后台进行配置（合法域名）<br>在开发期间可能线上服务器还没有弄好，此时是测试服务器，我们可以通过微信开发工具，详情 -&gt; 本地设置 -&gt; 勾选上不校验合法域名； 项目上线还是必须要在 后台进行配置</p>
+<p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">wx.request(&#123;</span><br><span class="line">    url: <span class="string">&#x27;请求的路径&#x27;</span>,</span><br><span class="line">    method: <span class="string">&#x27;请求的方式&#x27;</span>,</span><br><span class="line">    data: <span class="string">&#x27;请求参数&#x27;</span>,</span><br><span class="line">    header: <span class="string">&#x27;设置请求头信息&#x27;</span>,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 请求成功的调用</span></span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 请求失败的调用</span></span><br><span class="line">    &#125;,</span><br><span class="line">    complete: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 不管请求成功或者失败都会调用</span></span><br><span class="line">        <span class="comment">// 隐藏loading效果</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><h3 id="声明式导航（⭐⭐）"><a href="#声明式导航（⭐⭐）" class="headerlink" title="声明式导航（⭐⭐）"></a>声明式导航（⭐⭐）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 跳转tabBar页面 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">&quot;跳转路径，要以/开头&quot;</span> <span class="attr">open-type</span>=<span class="string">&quot;switchTab&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 跳转非tabBar页面 默认就是跳转非tabBar 如果要设置 open-type=&quot;navigate&quot;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">&quot;跳转路径，要以/开头&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 返回 如果式tabBar页面，返回效果无效--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">open-type</span>=<span class="string">&quot;navigateBack&quot;</span> <span class="attr">delta</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="编程式导航（⭐⭐⭐）"><a href="#编程式导航（⭐⭐⭐）" class="headerlink" title="编程式导航（⭐⭐⭐）"></a>编程式导航（⭐⭐⭐）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 跳转tabBar页面</span></span><br><span class="line">wx.switchTab(&#123;</span><br><span class="line">    url: <span class="string">&#x27;跳转路径，要以/开头&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 跳转非tabBar页面</span></span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">&#x27;跳转路径，要以/开头&#x27;</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 返回 不设置属性的话 默认 delta 是 1</span></span><br><span class="line">wx.navigateBack();</span><br></pre></td></tr></table></figure>
+
+<h3 id="导航传参（⭐⭐⭐）"><a href="#导航传参（⭐⭐⭐）" class="headerlink" title="导航传参（⭐⭐⭐）"></a>导航传参（⭐⭐⭐）</h3><ol>
+<li><p>拼接字符串，queryString 的格式，在 url 地址后面 加上 ?key=value&amp;key1=value1</p>
+</li>
+<li><p>目标页面的 onLoad 函数里面就可以接受到参数， 通过 这个函数的 形参</p>
+</li>
+</ol>
+<h2 id="下拉刷新-amp-上拉加载（⭐⭐⭐）"><a href="#下拉刷新-amp-上拉加载（⭐⭐⭐）" class="headerlink" title="下拉刷新&amp;上拉加载（⭐⭐⭐）"></a>下拉刷新&amp;上拉加载（⭐⭐⭐）</h2><h3 id="下拉刷新"><a href="#下拉刷新" class="headerlink" title="下拉刷新"></a>下拉刷新</h3><ol>
+<li><p>在对应页面的 json 文件 开启下拉刷新 enablePullDownRefresh: true</p>
+</li>
+<li><p>需要在对应的 js 里面监听下拉刷新的函数 onPullDownRefresh()</p>
+</li>
+<li><p>需要在这个函数里面，我们手动调用 wx.stopPullDownRefresh() 关闭下拉刷新效果</p>
+</li>
+</ol>
+<h3 id="上拉加载"><a href="#上拉加载" class="headerlink" title="上拉加载"></a>上拉加载</h3><ol>
+<li><p>在对应页面 的 json 文件， 配置触底距离（可以不配置，默认是 50px） onReachBottomDistance: 100</p>
+</li>
+<li><p>只要触发了触底，就会调用 js 里面 onReachBottom() 这个函数，我们就可以去做分页加载逻辑了</p>
+</li>
+</ol>
+<h2 id="生命周期-（⭐⭐⭐）"><a href="#生命周期-（⭐⭐⭐）" class="headerlink" title="生命周期 （⭐⭐⭐）"></a>生命周期 （⭐⭐⭐）</h2><h3 id="应用级别生命周期"><a href="#应用级别生命周期" class="headerlink" title="应用级别生命周期"></a>应用级别生命周期</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">onLaunch</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 小程序首次运行的时候触发，触发一次</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onShow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 小程序显示的时候触发</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onHide</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">//  小程序隐藏的时候触发 例如切换到后台</span></span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以下的是了解</span></span><br><span class="line"><span class="function"><span class="title">onError</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 小程序发生错误的时候触发</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onPageNotFound</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 小程序第一次运行找不到页面的时候触发</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="页面级别生命周期"><a href="#页面级别生命周期" class="headerlink" title="页面级别生命周期"></a>页面级别生命周期</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">onLoad</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 页面加载的时候调用</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onShow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 页面显示的时候调用</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onReady</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 页面组件第一次渲染完毕调用</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onHide</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 页面隐藏的时候调用</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">onUnload</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// 页面卸载的时候调用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="wxs-（⭐⭐）"><a href="#wxs-（⭐⭐）" class="headerlink" title="wxs （⭐⭐）"></a>wxs （⭐⭐）</h2><p>wxs 是小程序提供的脚本语言， 解决在 wxml 里面直接调用函数的问题<br>wxs 应用场景： 过滤器</p>
+<p>wxs 遵行 commonJS 的规范</p>
+<h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; m1.xxx() &#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">wxs</span> <span class="attr">module</span>=<span class="string">&quot;m1&quot;</span>&gt;</span>module.exports.xxx = function()&#123; &#125;<span class="tag">&lt;/<span class="name">wxs</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2020/01/03/%E5%B0%8F%E7%A8%8B%E5%BA%8F02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/%E5%B0%8F%E7%A8%8B%E5%BA%8F02/" class="post-title-link" itemprop="url">小程序01</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-03 10:22:33" itemprop="dateCreated datePublished" datetime="2020-01-03T10:22:33+08:00">2020-01-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 19:08:33" itemprop="dateModified" datetime="2020-11-19T19:08:33+08:00">2020-11-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="小程序-Day02-总结"><a href="#小程序-Day02-总结" class="headerlink" title="小程序-Day02 总结"></a>小程序-Day02 总结</h1><h2 id="发布（⭐⭐）"><a href="#发布（⭐⭐）" class="headerlink" title="发布（⭐⭐）"></a>发布（⭐⭐）</h2><p>小程序发布流程 项目负责人</p>
+<ol>
+<li>借助微信开发工具，找到 上传按钮（工具 -&gt; 上传）</li>
+<li>在后台的 版本管理里面 -&gt; 开发版本 看到我们最近上传的一次代码</li>
+<li>我们可以设置体验版本</li>
+<li>申请 审核 微信团队进行审核</li>
+<li>审核通过之后就可以发布了</li>
+</ol>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="如何绑定事件（⭐⭐⭐）"><a href="#如何绑定事件（⭐⭐⭐）" class="headerlink" title="如何绑定事件（⭐⭐⭐）"></a>如何绑定事件（⭐⭐⭐）</h3><p>以 bind 开头绑定事件（没有 click 事件与之代替是 tap 事件）</p>
+<ol>
+<li>在 wxml 里面 bind 绑定</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">bindtap</span>=<span class="string">&quot;tapHandler&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在对应的 js 里面实现这个函数</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">tapHandler</span>(<span class="params">ev</span>)</span>&#123;</span><br><span class="line">      ev 就是事件对象</span><br><span class="line">      ev.target  or  ev.detail</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件的传参"><a href="#事件的传参" class="headerlink" title="事件的传参"></a>事件的传参</h3><p>核心思路：利用自定义属性来传递， 自定义属性遵循 h5 的规范</p>
+<ol>
+<li>绑定事件，设置自定义属性</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">bindtap</span>=<span class="string">&quot;tapHandler&quot;</span> <span class="attr">data-index</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在对应的 js 里面实现这个函数,通过 target 属性来拿到值</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">    data: &#123;&#125;,</span><br><span class="line">    <span class="function"><span class="title">tapHandler</span>(<span class="params">ev</span>)</span>&#123;</span><br><span class="line">     ev.target.dataset.index 就可以取到自定义属性里面的值了</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现数据的双向绑定"><a href="#实现数据的双向绑定" class="headerlink" title="实现数据的双向绑定"></a>实现数据的双向绑定</h3><ol>
+<li>在 data 里面定义 msg 字段</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">    msg: <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>把这个 msg 绑定在 input 身上，同时给 input 标签绑定 input 事件</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123;msg&#125;&#125;&quot;</span> <span class="attr">bindinput</span>=<span class="string">&quot;inputHandler&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>在事件处理函数里面，获取到用户输入的信息，然后通过 this.setData() 来更新数据</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">inputHandler</span>(<span class="params">ev</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 小程序如果要修改data里面的数据达到页面刷新效果的话，必须使用 this.setData()</span></span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">        msg: ev.detail.value</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="渲染（⭐⭐⭐）"><a href="#渲染（⭐⭐⭐）" class="headerlink" title="渲染（⭐⭐⭐）"></a>渲染（⭐⭐⭐）</h2><h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>语法：<br>wx:if 跟我们 vue 中 的 v-if 类似的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">&quot;条件判断&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:elif</span>=<span class="string">&quot;条件判断&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:else</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>语法：<br>hidden 跟我们 vue 中的 v-show 类似的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">&quot;&#123;&#123;true 隐藏 | false 显示&#125;&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;array&#125;&#125;&quot;</span> <span class="attr">wx:key</span>=<span class="string">&quot;index&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;index&#125;&#125; 获取索引 </span><br><span class="line">    &#123;&#123; item &#125;&#125; 获取的是每一个元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们可以制定别名<br>wx:for-index  指定索引的别名<br>wx:for-item   指定元素的别名</p>
+<h2 id="wxss-（⭐⭐⭐）"><a href="#wxss-（⭐⭐⭐）" class="headerlink" title="wxss （⭐⭐⭐）"></a>wxss （⭐⭐⭐）</h2><p>① rpx 单位    相对单位，小程序提供的，会把屏幕宽度等分成750份，每一份就是一个rpx， 我们写小程序的时候，单位把px替换成rpx<br>② @import 进行样式的导入(第三方组件库的使用)<br>全局的wxss 和 局部的wxss<br>如果冲突了，并且优先级相同的情况下，采取的是就近原则，取的是局部的</p>
+<h2 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h2><h3 id="window节点-（⭐⭐）"><a href="#window节点-（⭐⭐）" class="headerlink" title="window节点  （⭐⭐）"></a>window节点  （⭐⭐）</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;window&quot;:&#123;</span><br><span class="line">    &quot;navigationBarTitleText&quot;: &quot;设置的是标题&quot;,</span><br><span class="line">    &quot;navigationBarTextStyle&quot;:&quot;标题的颜色，只支持 black | white&quot;,</span><br><span class="line">    &quot;navigationBarBackgroundColor&quot;: &quot;标题栏的背景颜色，只支持16进制&quot;,</span><br><span class="line">    &quot;enablePullDownRefresh&quot;: &quot;值是true 代表开启了下拉刷新，默认是false&quot;,</span><br><span class="line">    &quot;backgroundColor&quot;: &quot;设置下拉刷新的背景颜色，只支持16进制&quot;,</span><br><span class="line">    &quot;backgroundTextStyle&quot;: &quot;设置下拉刷新loading的颜色 dark | light&quot;,</span><br><span class="line">    &quot;onReachBottomDistance&quot;:&quot;配置上拉触底的距离&quot;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>enablePullDownRefresh 如果开启了之后，会调用js里面 onPullDownRefresh 函数</li>
+<li>onReachBottomDistance 这个默认值是50px，如果你不配置，也会触发对应的回调函数 onReachBottom</li>
+</ul>
+<h3 id="tabBar节点-（⭐⭐）"><a href="#tabBar节点-（⭐⭐）" class="headerlink" title="tabBar节点  （⭐⭐）"></a>tabBar节点  （⭐⭐）</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&quot;tabBar&quot;: &#123;</span><br><span class="line">    &quot;list&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/home/home&quot;</span>, <span class="comment">// 点击跳转的路由</span></span><br><span class="line">        <span class="attr">&quot;text&quot;</span>: <span class="string">&quot;首页&quot;</span>, <span class="comment">// 标题</span></span><br><span class="line">        <span class="attr">&quot;iconPath&quot;</span>: <span class="string">&quot;/images/tabs/home.png&quot;</span>, <span class="comment">// 默认显示的图标</span></span><br><span class="line">        <span class="attr">&quot;selectedIconPath&quot;</span>: <span class="string">&quot;/images/tabs/home-active.png&quot;</span> <span class="comment">// 选中时候的图标</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>tabBar 如果设置的是position 为top的话，icon图标是不显示的 </li>
+<li>tabBar 里面list的长度必须是 2-5个 </li>
+<li>tabBar 里面配置的 iconPath 或者是 selectedIconPath 不能是网络图片</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2020/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F01/" class="post-title-link" itemprop="url">小程序01</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-01 10:22:33" itemprop="dateCreated datePublished" datetime="2020-01-01T10:22:33+08:00">2020-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-19 19:08:06" itemprop="dateModified" datetime="2020-11-19T19:08:06+08:00">2020-11-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="今天总结"><a href="#今天总结" class="headerlink" title="今天总结"></a>今天总结</h1><h2 id="小程序与-PC-开发的区别（⭐⭐）"><a href="#小程序与-PC-开发的区别（⭐⭐）" class="headerlink" title="小程序与 PC 开发的区别（⭐⭐）"></a>小程序与 PC 开发的区别（⭐⭐）</h2><p>核心的区别 运行环境不同<br>pc 运行环境在浏览器<br>小程序 运行环境在微信<br>环境不同导致 api 不一致</p>
+<h2 id="如何创建一个小程序（⭐⭐⭐）"><a href="#如何创建一个小程序（⭐⭐⭐）" class="headerlink" title="如何创建一个小程序（⭐⭐⭐）"></a>如何创建一个小程序（⭐⭐⭐）</h2><ol>
+<li>注册公众号平台的账户 （年满 18 岁）</li>
+<li>需要拿到 appID 后台 -&gt; 开发 -&gt; 开发设置 -&gt; appID</li>
+<li>不要勾选 云开发</li>
+</ol>
+<h2 id="小程序的包结构（⭐⭐⭐）"><a href="#小程序的包结构（⭐⭐⭐）" class="headerlink" title="小程序的包结构（⭐⭐⭐）"></a>小程序的包结构（⭐⭐⭐）</h2><p>components 存放组件的<br>pages 目录： 存放页面的<br>utils 目录： 存放工具 js 文件的<br>app.js 小程序的入口文件<br>app.json 小程序全局配置文件<br>① pages 存放的是页面的路径 相当于是我们 vue 中的路由<br>② window 存放的是窗体相关的属性， 例如 navigationBar<br>app.wxss 小程序全局的样式文件<br>project.config.json 项目的配置项<br>sitemap.json 是否被索引 类似于 PC 的 SEO</p>
+<h2 id="小程序页面的组成（⭐⭐⭐）"><a href="#小程序页面的组成（⭐⭐⭐）" class="headerlink" title="小程序页面的组成（⭐⭐⭐）"></a>小程序页面的组成（⭐⭐⭐）</h2><p>由 4 部分构成</p>
+<ul>
+<li>  .js 文件 小程序页面的逻辑文件（生命周期，事件）</li>
+<li>  .wxml 文件 小程序页面的结构模板 类似于 html 的语法，但是有自己的标签</li>
+<li>  .wxss 文件 小程序页面的样式文件 自己的单位 rpx 专门用来解决移动端适配问题 等分成 750 等分</li>
+<li>  .json 文件 小程序页面的配置文件 （页面的 navigationBar 的样式，或者是注册自定义组件）</li>
+</ul>
+<h2 id="宿主环境"><a href="#宿主环境" class="headerlink" title="宿主环境"></a>宿主环境</h2><p>了解到什么是宿主环境？ （⭐⭐⭐）<br>寄生环境 依赖环境</p>
+<p>应用程序能够运行的环境<br>小程序能够运行的环境？ 必须要有微信的 app</p>
+<h3 id="通讯（⭐⭐）"><a href="#通讯（⭐⭐）" class="headerlink" title="通讯（⭐⭐）"></a>通讯（⭐⭐）</h3><p>通讯主体：<br>渲染层： wxml 和 wxss<br>逻辑层： js 代码 xws 脚本语言</p>
+<h3 id="运行机制（⭐⭐）"><a href="#运行机制（⭐⭐）" class="headerlink" title="运行机制（⭐⭐）"></a>运行机制（⭐⭐）</h3><p>小程序里面的交互都是要依托于微信这个 app 作为中转的<br>不管是 页面跟 js 交互<br>或者是 js 调用了第三方服务 api</p>
+<h3 id="组件（⭐⭐⭐）"><a href="#组件（⭐⭐⭐）" class="headerlink" title="组件（⭐⭐⭐）"></a>组件（⭐⭐⭐）</h3><p>view 组件类似于 div<br>text 组件 类似于 span<br>swiper 轮播图 必须要配合 swiper-item 属性 参考文档<br>scroll-view 滚动组件<br>① 内容要超过组件宽高<br>② 设置 scroll-y 属性 或者是 scroll-x 属性<br>rich-text 解析 html 结构<br>image 图片组件 mode 设置图片展示的模式 aspectFit<br>button 组件 按钮<br>…</p>
+<h3 id="api（⭐⭐）"><a href="#api（⭐⭐）" class="headerlink" title="api（⭐⭐）"></a>api（⭐⭐）</h3><p>小程序 api 的分类</p>
+<ul>
+<li>  事件</li>
+<li>  同步</li>
+<li>  异步</li>
+</ul>
+<h2 id="协同开发（⭐⭐）"><a href="#协同开发（⭐⭐）" class="headerlink" title="协同开发（⭐⭐）"></a>协同开发（⭐⭐）</h2><p>管理者两个角色<br>① 项目开发人员<br>② 项目体验人员</p>
+<p>小程序的启动流程 页面的 启动流程（⭐）<br>小程序启动流程：<br>① 下载小程序包<br>② 解析 app.json 文件找到 pages 里面首页<br>③ 执行入口文件 app.js 调用 App() 得到实例<br>④ 渲染内容</p>
+<p>页面的启动流程：<br>① 解析 页面的 json 文件<br>② 执行对应 .js 文件 Page() 得到实例<br>③ 找到对应页面进行渲染</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1/" class="post-title-link" itemprop="url">我的第一次</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-05 10:22:33" itemprop="dateCreated datePublished" datetime="2019-11-05T10:22:33+08:00">2019-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-13 11:34:55" itemprop="dateModified" datetime="2020-11-13T11:34:55+08:00">2020-11-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-我对vuex的理解"><a href="#1-我对vuex的理解" class="headerlink" title="1.我对vuex的理解"></a>1.我对vuex的理解</h2><p>​        vuex是用来管理全局状态的，就像spring的bean工厂，去管理全局的属性，我在使用组件间传参数时，如果涉及传参多余子到父，或父到子，我就会选择使用vuex。我遇到过一个问题，就是在写文章评论的时候，我开始使用父传子的，article组件把文章id传给子组件CommentList然后渲染每一条评论，又封装了弹出层pop中的评论的组件ComemntPost然后评论成功后会返回一条数据用来更新现在的评论列表，也就是说，现在评论前面需要新增一条数据，这时候问题来了，我得传数据去article父组件，然后再传到CommentList，然后在CommentList进行watch监听，如果有就进行数组的追加。然后我就想这时候使用vuex就好了。</p>
+<p>​       然后之前为了组件复用，我又把每一个评论封装成了comment组件。</p>
+<p>​       评论列表是使用的vant的list组件，使用了懒加载。没加载一次就把数据push进与list组件绑定的数组数据，</p>
+<p>然后问题就来了。</p>
+<p>​      我在comment里面点了回复，我想把pop组件框article里面弹出进行评论，pop显示属性show需要传到ComemntList然后传到article，这时候使用vuex就方便了对数据进行统一的管理。</p>
+<p> 1.为了管理更加方便，我在vuex使用了module模块，开启了命名空间，使用时在store里面新建了module文件夹，然后放了commentModule，按需导出，</p>
+<p>2.在store文件夹下的index按需导入，在modules里面使用</p>
+<p>3.在.vue单文件里面使用时，和以前一样</p>
+<p>   import { mapState, mapMutations } from ‘vuex’</p>
+<p>4.然后在computed下：</p>
+<p>…mapState(‘commentModules’, [‘show’, ‘comment’])</p>
+<p>5.在methods下： …mapMutations(‘commentModules’, [‘hideReply’])</p>
+<h2 id="2-vant"><a href="#2-vant" class="headerlink" title="2.vant"></a>2.vant</h2><p>pop弹出层是懒渲染的，只有当第一次弹出时才渲染数据</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>文章点赞用了<van-button>组件，当点击时，发送请求，成功了手动让评论里面的isLiking属性变化，然后给点赞条数加1，点赞的时候开启van-button的等待效果，loading属性，点赞请求发送时，开启，，无论成功还是失败都关闭。取消点赞反之亦然。</p>
+<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>文章评论列表使用了list列表，然后每一条评论，又使用了van-cell，通过slot控制样式，在list列表中，使用了懒加载，评论到可视距离底部了，就停止加载，加载时使用trycatch接口。当向上滑动时，使列表没有到可视距离底部了，就开始加载，在加载时，开始loading属性。然后还加了refresh组件，向上滑就加载，加载时发生错误时就在catch里面开启erro属性，并且打开错误提示，当重新加载时使erro为false。</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><p>回复层使用popup组件，通过v-model控制弹出和关闭，v-model可以拆开为：value和@input</p>
+<h2 id="6-时序问题"><a href="#6-时序问题" class="headerlink" title="6.时序问题"></a>6.时序问题</h2><p>1.点击图片van-cell，<br>2.弹出file表单的点击事件，如果没有图片，直接返回，有图片，也就是this.$refs.imgFileRef.files.length不为0，就弹出图片pop框，然后给pop框的图片的src赋值，<br>3.直接赋值会发生错误，所以这里的src属性绑定一个数据，然后修改的是这个data里面的这个数据，取消时，关闭popup，清空这个数据，避免下次修改图片，缺取消了后会有数据而导致的popup显示,<br>4.pop中的图片封装为组件，data里面的数据imgUrl作为props传给子组件，然后进行渲染<br>5.这里一定得封装组件，不然会发生时序的问题，刚开始，我是直接在组件内写的，方法里面还没有给urlData赋值便去取这个节点的src，导致出错，后面加了settimeout，去取这个值，也使用了process.mextTick(),虽然取得了值，但是还是发生了时序的问题，最后我封装了组件，问题就没有了。</p>
+<h2 id="7-keep-alive"><a href="#7-keep-alive" class="headerlink" title="7.keep-alive"></a>7.keep-alive</h2><p><code>&lt;keep-alive&gt;</code> 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们。和 <code>&lt;transition&gt;</code> 相似，<code>&lt;keep-alive&gt;</code> 是一个抽象组件：它自身不会渲染一个 DOM 元素，也不会出现在组件的父组件链中。</p>
+<p>当组件在 <code>&lt;keep-alive&gt;</code> 内被切换，它的 <code>activated</code> 和 <code>deactivated</code> 这两个生命周期钩子函数将会被对应执行。</p>
+<blockquote>
+<p>在 2.2.0 及其更高版本中，<code>activated</code> 和 <code>deactivated</code> 将会在 <code>&lt;keep-alive&gt;</code> 树内的所有嵌套组件中触发。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://327464319.github.io/2019/11/04/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/04/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-04 23:22:33" itemprop="dateCreated datePublished" datetime="2019-11-04T23:22:33+08:00">2019-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-13 11:34:17" itemprop="dateModified" datetime="2020-11-13T11:34:17+08:00">2020-11-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -167,179 +701,171 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://327464319.github.io/2019/11/04/hello-world/" data-id="ckh4athbx0000i8tcfnjt45xj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <h1 class="blog-title">Hexo</h1>
-    <h2 class="blog-subtitle"></h2>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
-  </div>
-</div>
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
-    <h2 class="author">John Doe</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
-    </div>
-
-
-
-    <div class="social-link">
-      
-        <a class="hvr-bounce-in" href="http://github.com/ShanaMaid" target="_blank" title="Github">
-          Github
-        </a>
-      
-    </div>
-
-    <div class="friend-link">
-      <h2>友情链接</h2>
-      
-        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
-          ShanaMaid
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy;2019 - 2020 John Doe<br>
-      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
-      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      
-    </div>
     
-  </div>
-</footer>
-    </div>
     
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+
+  
+
+
+
+          </div>
+          
+
 <script>
-new WOW().init();
-</script>   
-
-
-  
-<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-
-  
-<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-  
-<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
-
-  
-<script src="/plugin/galmenu/GalMenu.js"></script>
-
-  <div class="GalMenu GalDropDown">
-      <div class="circle" id="gal">
-        <div class="ring">
-          
-            <a href="/" title="" class="menuItem">首页</a>
-          
-            <a href="/tags" title="" class="menuItem">标签</a>
-          
-            <a href="/categories" title="" class="menuItem">分类</a>
-          
-            <a href="/archives" title="" class="menuItem">归档</a>
-          
-            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
-          
-            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
-          
-        </div>
-        
-          <audio id="audio" src="#"></audio>
-        
-      </div> 
-</div>
-<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
-  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-    l = items.length; i < l; i++) {
-      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
-    }</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('body').GalMenu({
-      'menu': 'GalDropDown'
-    })
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
   });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-  <section class="hidden-xs"> 
-  <ul class="cb-slideshow"> 
-    <li><span>苟利</span></li> 
-    <li><span>国家</span></li> 
-    <li><span>生死以</span></li> 
-    <li><span>岂能</span></li> 
-    <li><span>祸福</span></li> 
-    <li><span>趋避之</span></li> 
-  </ul>
-</section>
-
-<script src="/js/script.js"></script>
-
-
-
-
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
