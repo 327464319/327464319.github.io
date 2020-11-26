@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>深拷贝与浅拷贝 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -167,117 +167,98 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/09/小程序06/">小程序06</a></h4>
-                            
-                            <p><time datetime="2020-01-09T15:02:53.000Z"><a href="/2020/01/09/小程序06/">2020-01-09</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/08/小程序05/">小程序05</a></h4>
-                            
-                            <p><time datetime="2020-01-08T10:42:53.000Z"><a href="/2020/01/08/小程序05/">2020-01-08</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/06/小程序04/">小程序04</a></h4>
-                            
-                            <p><time datetime="2020-01-06T13:22:39.000Z"><a href="/2020/01/06/小程序04/">2020-01-06</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/04/小程序03/">小程序03</a></h4>
-                            
-                            <p><time datetime="2020-01-04T07:22:33.000Z"><a href="/2020/01/04/小程序03/">2020-01-04</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/03/小程序02/">小程序02</a></h4>
-                            
-                            <p><time datetime="2020-01-03T08:55:12.000Z"><a href="/2020/01/03/小程序02/">2020-01-03</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/01/01/小程序01/">小程序01</a></h4>
-                            
-                            <p><time datetime="2020-01-01T13:22:43.000Z"><a href="/2020/01/01/小程序01/">2020-01-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-02-14T14:22:33.000Z" itemprop="datePublished">
+          2020-02-14
+      </time>
+    
+</span>
+                <h1>深拷贝与浅拷贝</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="1-slice和splice"><a href="#1-slice和splice" class="headerlink" title="1.slice和splice"></a>1.slice和splice</h4><ul>
+<li>slice不会对原数组操作，splice会。</li>
+<li>splice 还可以成为添加操作，不仅仅是删除</li>
+<li>slice()如果数组里面没有引用类型可以作为深拷贝拷贝，否则为浅拷贝，里面的引用类型修改，拷贝之前的引用类型的值会改变 </li>
+</ul>
+<h4 id="2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"><a href="#2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。" class="headerlink" title="2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"></a>2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。</h4><h4 id="3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"><a href="#3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝" class="headerlink" title="3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"></a>3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝</h4><h4 id="4，…剩余参数-解构赋值的方式等同于slice"><a href="#4，…剩余参数-解构赋值的方式等同于slice" class="headerlink" title="4，…剩余参数 解构赋值的方式等同于slice"></a>4，…剩余参数 解构赋值的方式等同于slice</h4><h4 id="5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined"><a href="#5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined" class="headerlink" title="5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,"></a>5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,</h4><h4 id="是function会报错，undefined会忽略"><a href="#是function会报错，undefined会忽略" class="headerlink" title="是function会报错，undefined会忽略"></a>是function会报错，undefined会忽略</h4><h4 id="6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝"><a href="#6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝" class="headerlink" title="6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝"></a>6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝</h4><h4 id="7-回调封装深拷贝"><a href="#7-回调封装深拷贝" class="headerlink" title="7.回调封装深拷贝"></a>7.回调封装深拷贝</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">const a&#x3D;[1,[2,3],&#123;</span><br><span class="line"> name:&#39;zs&#39;,</span><br><span class="line"> gender:&#39;女&#39;,</span><br><span class="line"> arr:[5,6,7]</span><br><span class="line">&#125;]</span><br><span class="line">const b&#x3D;</span><br><span class="line"> &#123;</span><br><span class="line">   name: &#39;zs&#39;,</span><br><span class="line">    gender: &#39;女&#39;,</span><br><span class="line">    arr: [5, 6, 7,[4,5]]</span><br><span class="line">  &#125;</span><br><span class="line">function cloneDeep(target)&#123;</span><br><span class="line"> let obj&#x3D;&#123;&#125;</span><br><span class="line"> if(target instanceof Array)&#123;</span><br><span class="line">  &#x2F;&#x2F; console.log(target instanceof Array);</span><br><span class="line">  &#x2F;&#x2F; console.log(Array.isArray(target));</span><br><span class="line">  obj&#x3D;[]</span><br><span class="line">  target.forEach((v,i)&#x3D;&gt;&#123;</span><br><span class="line">   obj[i]&#x3D;cloneDeep(v)</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;else if(target instanceof Object)&#123;</span><br><span class="line">  obj&#x3D;&#123;&#125;</span><br><span class="line">  for (k in target)&#123;</span><br><span class="line">   obj[k]&#x3D;cloneDeep(target[k])</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">  obj&#x3D;target</span><br><span class="line"> &#125;</span><br><span class="line"> return obj</span><br><span class="line">&#125;</span><br><span class="line">let d&#x3D;cloneDeep(a)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 48 ~ d&#39;, d)</span><br><span class="line">console.log(&#39;a&#39;,a)</span><br><span class="line">d[1][0]&#x3D;3123123</span><br><span class="line">console.log(&#39;修改后的a&#39;,a)</span><br><span class="line">console.log(&#39;修改后的d&#39;,d)</span><br><span class="line">let c&#x3D;cloneDeep(b)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 55 ~ c&#39;, c)</span><br><span class="line">console.log(&#39;b&#39;,b);</span><br><span class="line">c.arr[0]&#x3D;&#39;dasdasd&#39;</span><br><span class="line">console.log(&#39;修改后的c&#39;, c)</span><br><span class="line">console.log(&#39;修改后的b&#39;, b)</span><br></pre></td></tr></table></figure>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+
+
+<p>​     </p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2020/01/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F06/">
+        小程序06 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
