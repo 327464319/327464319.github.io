@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hexo</title>
+  <title>git的一些操作 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -173,16 +173,16 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2020-11-28T04:55:09.622Z" itemprop="datePublished">
-          2020-11-28
+      <time datetime="2020-05-19T06:22:02.000Z" itemprop="datePublished">
+          2020-05-19
       </time>
     
 </span>
-                <h1></h1>
+                <h1>git的一些操作</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h5 id="1-创建本地的开发分支"><a href="#1-创建本地的开发分支" class="headerlink" title="1.创建本地的开发分支"></a>1.创建本地的开发分支</h5><h5 id="2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）"><a href="#2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）" class="headerlink" title="2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）"></a>2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）</h5><h5 id="3-添加的秘钥是-pub结尾的公钥"><a href="#3-添加的秘钥是-pub结尾的公钥" class="headerlink" title="3.添加的秘钥是.pub结尾的公钥"></a>3.添加的秘钥是.pub结尾的公钥</h5><h5 id="4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-111-x75-x72-x5f-101-x6d-x61-105-x6c-64-101-120-x61-109-x70-x6c-x65-x2e-x63-x6f-x6d-“创建新的秘钥"><a href="#4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-111-x75-x72-x5f-101-x6d-x61-105-x6c-64-101-120-x61-109-x70-x6c-x65-x2e-x63-x6f-x6d-“创建新的秘钥" class="headerlink" title="4.可以使用ssh-keygen -t rsa -b 4096 -C “&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;“创建新的秘钥"></a>4.可以使用ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“创建新的秘钥</h5><h5 id="5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库"><a href="#5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库" class="headerlink" title="5.其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库"></a>5.<code>其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库</code></h5><blockquote>
+      		<h5 id="1-创建本地的开发分支"><a href="#1-创建本地的开发分支" class="headerlink" title="1.创建本地的开发分支"></a>1.创建本地的开发分支</h5><h5 id="2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）"><a href="#2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）" class="headerlink" title="2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）"></a>2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）</h5><h5 id="3-添加的秘钥是-pub结尾的公钥"><a href="#3-添加的秘钥是-pub结尾的公钥" class="headerlink" title="3.添加的秘钥是.pub结尾的公钥"></a>3.添加的秘钥是.pub结尾的公钥</h5><h5 id="4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-x6f-x75-114-95-101-109-97-105-108-64-x65-120-97-109-x70-x6c-101-46-99-111-109-“创建新的秘钥"><a href="#4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-x6f-x75-114-95-101-109-97-105-108-64-x65-120-97-109-x70-x6c-101-46-99-111-109-“创建新的秘钥" class="headerlink" title="4.可以使用ssh-keygen -t rsa -b 4096 -C “&#x79;&#x6f;&#x75;&#114;&#95;&#101;&#109;&#97;&#105;&#108;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#109;“创建新的秘钥"></a>4.可以使用ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#95;&#101;&#109;&#97;&#105;&#108;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#109;">&#x79;&#x6f;&#x75;&#114;&#95;&#101;&#109;&#97;&#105;&#108;&#64;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#111;&#109;</a>“创建新的秘钥</h5><h5 id="5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库"><a href="#5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库" class="headerlink" title="5.其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库"></a>5.<code>其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库</code></h5><blockquote>
 <p>场景一.</p>
 <ul>
 <li>使用git切换到最新的代码分支，使用git pull拉取最新代码，git完整代码为git pull oringin master</li>
@@ -255,8 +255,7 @@
 <p>如果和其他小伙伴同事开发一个功能，约定修改的函数名称，文件名称，各自完成的功能，解决冲突的办法是各自开发各自功能</p>
 <p>情景四 本地有代码，远程无仓库</p>
 </blockquote>
-<h5 id="15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）"><a href="#15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）" class="headerlink" title="15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）"></a>15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）</h5><h5 id="16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"><a href="#16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。" class="headerlink" title="16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"></a>16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。</h5><h5 id="17-git-diff"><a href="#17-git-diff" class="headerlink" title="17.git diff"></a>17.git diff</h5><h5 id="18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录"><a href="#18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录" class="headerlink" title="18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录"></a>18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录</h5><h5 id="19-git-rebase合并先前不用的提交，让我们提交记录保持干净"><a href="#19-git-rebase合并先前不用的提交，让我们提交记录保持干净" class="headerlink" title="19.git rebase合并先前不用的提交，让我们提交记录保持干净"></a>19.git rebase合并先前不用的提交，让我们提交记录保持干净</h5><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201105114808590.png" alt="image-20201105114808590"></p>
-
+<h5 id="15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）"><a href="#15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）" class="headerlink" title="15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）"></a>15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）</h5><h5 id="16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"><a href="#16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。" class="headerlink" title="16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"></a>16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。</h5><h5 id="17-git-diff"><a href="#17-git-diff" class="headerlink" title="17.git diff"></a>17.git diff</h5><h5 id="18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录"><a href="#18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录" class="headerlink" title="18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录"></a>18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录</h5><h5 id="19-git-rebase合并先前不用的提交，让我们提交记录保持干净"><a href="#19-git-rebase合并先前不用的提交，让我们提交记录保持干净" class="headerlink" title="19.git rebase合并先前不用的提交，让我们提交记录保持干净"></a>19.git rebase合并先前不用的提交，让我们提交记录保持干净</h5>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
@@ -264,7 +263,7 @@
     
     
     <a class="pull-right" href="/2020/04/10/uniapp-hbuilder/">
-        深拷贝与浅拷贝 →
+        那些年，我hbuilder创建微信小程序踩的坑 →
     </a>
     
 </nav>
