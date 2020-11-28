@@ -173,8 +173,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2020-02-14T14:02:53.000Z" itemprop="datePublished">
-          2020-02-14
+      <time datetime="2020-03-15T14:02:02.000Z" itemprop="datePublished">
+          2020-03-15
       </time>
     
 </span>
@@ -182,33 +182,343 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h4 id="1-slice和splice"><a href="#1-slice和splice" class="headerlink" title="1.slice和splice"></a>1.slice和splice</h4><ul>
-<li>slice不会对原数组操作，splice会。</li>
-<li>splice 还可以成为添加操作，不仅仅是删除</li>
-<li>slice()如果数组里面没有引用类型可以作为深拷贝拷贝，否则为浅拷贝，里面的引用类型修改，拷贝之前的引用类型的值会改变 </li>
-</ul>
-<h4 id="2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"><a href="#2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。" class="headerlink" title="2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"></a>2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。</h4><h4 id="3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"><a href="#3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝" class="headerlink" title="3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"></a>3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝</h4><h4 id="4，…剩余参数-解构赋值的方式等同于slice"><a href="#4，…剩余参数-解构赋值的方式等同于slice" class="headerlink" title="4，…剩余参数 解构赋值的方式等同于slice"></a>4，…剩余参数 解构赋值的方式等同于slice</h4><h4 id="5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined"><a href="#5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined" class="headerlink" title="5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,"></a>5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,</h4><h4 id="是function，undefined会忽略"><a href="#是function，undefined会忽略" class="headerlink" title="是function，undefined会忽略"></a>是function，undefined会忽略</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.如果json里面有时间对象，则序列化结果：时间对象&#x3D;&gt;字符串的形式；</span><br><span class="line">2.如果json里有RegExp、Error对象，则序列化的结果将只得到空对象 RegExp、Error &#x3D;&gt; &#123;&#125;；</span><br><span class="line">3.如果json里有 function,undefined，则序列化的结果会把 function,undefined 丢失；</span><br><span class="line">4.如果json里有NaN、Infinity和-Infinity，则序列化的结果NaN,Infinity和-Infinity会变成null；</span><br><span class="line">5.如果json里有对象是由构造函数生成的，则序列化的结果会丢弃对象的 constructor；</span><br><span class="line">6.如果对象中存在循环引用的情况也无法实现深拷贝</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝"><a href="#6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝" class="headerlink" title="6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝"></a>6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝</h4><h4 id="7-回调封装深拷贝"><a href="#7-回调封装深拷贝" class="headerlink" title="7.回调封装深拷贝"></a>7.回调封装深拷贝</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">const a&#x3D;[1,[2,3],&#123;</span><br><span class="line"> name:&#39;zs&#39;,</span><br><span class="line"> gender:&#39;女&#39;,</span><br><span class="line"> arr:[5,6,7]</span><br><span class="line">&#125;]</span><br><span class="line">const b&#x3D;</span><br><span class="line"> &#123;</span><br><span class="line">   name: &#39;zs&#39;,</span><br><span class="line">    gender: &#39;女&#39;,</span><br><span class="line">    arr: [5, 6, 7,[4,5]]</span><br><span class="line">  &#125;</span><br><span class="line">function cloneDeep(target)&#123;</span><br><span class="line"> let obj&#x3D;&#123;&#125;</span><br><span class="line"> if(target instanceof Array)&#123;</span><br><span class="line">  &#x2F;&#x2F; console.log(target instanceof Array);</span><br><span class="line">  &#x2F;&#x2F; console.log(Array.isArray(target));</span><br><span class="line">  obj&#x3D;[]</span><br><span class="line">  target.forEach((v,i)&#x3D;&gt;&#123;</span><br><span class="line">   obj[i]&#x3D;cloneDeep(v)</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;else if(target instanceof Object)&#123;</span><br><span class="line">  obj&#x3D;&#123;&#125;</span><br><span class="line">  for (k in target)&#123;</span><br><span class="line">   obj[k]&#x3D;cloneDeep(target[k])</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">  obj&#x3D;target</span><br><span class="line"> &#125;</span><br><span class="line"> return obj</span><br><span class="line">&#125;</span><br><span class="line">let d&#x3D;cloneDeep(a)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 48 ~ d&#39;, d)</span><br><span class="line">console.log(&#39;a&#39;,a)</span><br><span class="line">d[1][0]&#x3D;3123123</span><br><span class="line">console.log(&#39;修改后的a&#39;,a)</span><br><span class="line">console.log(&#39;修改后的d&#39;,d)</span><br><span class="line">let c&#x3D;cloneDeep(b)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 55 ~ c&#39;, c)</span><br><span class="line">console.log(&#39;b&#39;,b);</span><br><span class="line">c.arr[0]&#x3D;&#39;dasdasd&#39;</span><br><span class="line">console.log(&#39;修改后的c&#39;, c)</span><br><span class="line">console.log(&#39;修改后的b&#39;, b)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>​     </p>
+      		<table>
+<thead>
+<tr>
+<th>CSS样式命名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网页公共命名</td>
+<td></td>
+</tr>
+<tr>
+<td>#wrapper</td>
+<td>页面外围控制整体布局宽度</td>
+</tr>
+<tr>
+<td>#container或#content</td>
+<td>容器,用于最外层</td>
+</tr>
+<tr>
+<td>#layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>#head, #header</td>
+<td>页头部分</td>
+</tr>
+<tr>
+<td>#foot, #footer</td>
+<td>页脚部分</td>
+</tr>
+<tr>
+<td>#nav</td>
+<td>主导航</td>
+</tr>
+<tr>
+<td>#subnav</td>
+<td>二级导航</td>
+</tr>
+<tr>
+<td>#menu</td>
+<td>菜单</td>
+</tr>
+<tr>
+<td>#submenu</td>
+<td>子菜单</td>
+</tr>
+<tr>
+<td>#sideBar</td>
+<td>侧栏</td>
+</tr>
+<tr>
+<td>#sidebar_a, #sidebar_b</td>
+<td>左边栏或右边栏</td>
+</tr>
+<tr>
+<td>#main</td>
+<td>页面主体</td>
+</tr>
+<tr>
+<td>#tag</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>#msg #message</td>
+<td>提示信息</td>
+</tr>
+<tr>
+<td>#tips</td>
+<td>小技巧</td>
+</tr>
+<tr>
+<td>#vote</td>
+<td>投票</td>
+</tr>
+<tr>
+<td>#friendlink</td>
+<td>友情连接</td>
+</tr>
+<tr>
+<td>#title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>#summary</td>
+<td>摘要</td>
+</tr>
+<tr>
+<td>#loginbar</td>
+<td>登录条</td>
+</tr>
+<tr>
+<td>#searchInput</td>
+<td>搜索输入框</td>
+</tr>
+<tr>
+<td>#hot</td>
+<td>热门热点</td>
+</tr>
+<tr>
+<td>#search</td>
+<td>搜索</td>
+</tr>
+<tr>
+<td>#search_output</td>
+<td>搜索输出和搜索结果相似</td>
+</tr>
+<tr>
+<td>#searchBar</td>
+<td>搜索条</td>
+</tr>
+<tr>
+<td>#search_results</td>
+<td>搜索结果</td>
+</tr>
+<tr>
+<td>#copyright</td>
+<td>版权信息</td>
+</tr>
+<tr>
+<td>#branding</td>
+<td>商标</td>
+</tr>
+<tr>
+<td>#logo</td>
+<td>网站LOGO标志</td>
+</tr>
+<tr>
+<td>#siteinfo</td>
+<td>网站信息</td>
+</tr>
+<tr>
+<td>#siteinfoLegal</td>
+<td>法律声明</td>
+</tr>
+<tr>
+<td>#siteinfoCredits</td>
+<td>信誉</td>
+</tr>
+<tr>
+<td>#joinus</td>
+<td>加入我们</td>
+</tr>
+<tr>
+<td>#partner</td>
+<td>合作伙伴</td>
+</tr>
+<tr>
+<td>#service</td>
+<td>服务</td>
+</tr>
+<tr>
+<td>#regsiter</td>
+<td>注册</td>
+</tr>
+<tr>
+<td>arr/arrow</td>
+<td>箭头</td>
+</tr>
+<tr>
+<td>#guild</td>
+<td>指南</td>
+</tr>
+<tr>
+<td>#sitemap</td>
+<td>网站地图</td>
+</tr>
+<tr>
+<td>#list</td>
+<td>列表</td>
+</tr>
+<tr>
+<td>#homepage</td>
+<td>首页</td>
+</tr>
+<tr>
+<td>#subpage</td>
+<td>二级页面子页面</td>
+</tr>
+<tr>
+<td>#tool, #toolbar</td>
+<td>工具条</td>
+</tr>
+<tr>
+<td>#drop</td>
+<td>下拉</td>
+</tr>
+<tr>
+<td>#dorpmenu</td>
+<td>下拉菜单</td>
+</tr>
+<tr>
+<td>#status</td>
+<td>状态</td>
+</tr>
+<tr>
+<td>#scroll</td>
+<td>滚动</td>
+</tr>
+<tr>
+<td>.tab</td>
+<td>标签页</td>
+</tr>
+<tr>
+<td>.left .right .center</td>
+<td>居左、中、右</td>
+</tr>
+<tr>
+<td>.news</td>
+<td>新闻</td>
+</tr>
+<tr>
+<td>.download</td>
+<td>下载</td>
+</tr>
+<tr>
+<td>.banner</td>
+<td>广告条(顶部广告条)</td>
+</tr>
+</tbody></table>
+<h2 id="CSS命名规则"><a href="#CSS命名规则" class="headerlink" title="CSS命名规则"></a>CSS命名规则</h2><p>​     　　头：header</p>
+<p>​     　　内容：content/container</p>
+<p>​     　　尾：footer</p>
+<p>​     　　导航：nav</p>
+<p>​     　　侧栏：sidebar</p>
+<p>​     　　栏目：column</p>
+<p>​     　　页面外围控制整体布局宽度：wrapper</p>
+<p>​     　　左右中：left right center</p>
+<p>​     　　登录条：loginbar</p>
+<p>​     　　标志：logo</p>
+<p>​     　　广告：banner</p>
+<p>​     　　页面主体：main</p>
+<p>​     　　热点：hot</p>
+<p>​     　　新闻：news</p>
+<p>​     　　下载：download</p>
+<p>​     　　子导航：subnav</p>
+<p>​     　　菜单：menu</p>
+<p>​     　　子菜单：submenu</p>
+<p>​     　　搜索：search</p>
+<p>​     　　友情链接：friendlink</p>
+<p>​     　　页脚：footer</p>
+<p>​     　　版权：copyright</p>
+<p>​     　　滚动：scroll</p>
+<p>​     　　内容：content</p>
+<p>​     　　标签页：tab</p>
+<p>​     　　文章列表：list</p>
+<p>​     　　提示信息：msg</p>
+<p>​     　　小技巧：tips</p>
+<p>​     　　栏目标题：title</p>
+<p>​     　　加入：joinus</p>
+<p>​     　　指南：guild</p>
+<p>​     　　服务：service</p>
+<p>​     　　注册：regsiter</p>
+<p>​     　　状态：status</p>
+<p>​     　　投票：vote</p>
+<p>​     　　合作伙伴：partner</p>
+<p>CSS+DIV的命名规则：</p>
+<p>　　登录条:loginBar</p>
+<p>　　标志:logo</p>
+<p>　　侧栏:sideBar</p>
+<p>　　广告:banner</p>
+<p>　　导航:nav</p>
+<p>　　子导航:subNav</p>
+<p>　　菜单:menu</p>
+<p>　　子菜单:subMenu</p>
+<p>　　搜索:search</p>
+<p>　　滚动:scroll</p>
+<p>　　页面主体:main</p>
+<p>　　内容:content</p>
+<p>　　标签页:tab</p>
+<p>　　文章列表:list</p>
+<p>　　提示信息:msg</p>
+<p>　　小技巧:tips</p>
+<p>　　栏目标题:title</p>
+<p>　　友情链接:friendLink</p>
+<p>　　页脚:footer</p>
+<p>　　加入:joinus</p>
+<p>　　指南:guild</p>
+<p>　　服务:service</p>
+<p>　　热点:hot</p>
+<p>　　新闻:news</p>
+<p>　　下载:download</p>
+<p>　　注册:regsiter</p>
+<p>　　状态:status</p>
+<p>　　按钮:btn</p>
+<p>　　投票:vote</p>
+<p>　　合作伙伴:partner</p>
+<p>　　版权:copyRight</p>
+<p>　　1.CSSID的命名</p>
+<p>　　外套:wrap</p>
+<p>　　主导航:mainNav</p>
+<p>　　子导航:subnav</p>
+<p>　　页脚:footer</p>
+<p>　　整个页面:content</p>
+<p>　　页眉:header</p>
+<p>　　页脚:footer</p>
+<p>　　商标:label</p>
+<p>　　标题:title</p>
+<p>　　主导航:mainNav(globalNav)</p>
+<p>　　顶导航:topnav</p>
+<p>　　边导航:sidebar</p>
+<p>　　左导航:leftsideBar</p>
+<p>　　右导航:rightsideBar</p>
+<p>　　旗志:logo</p>
+<p>　　标语:banner</p>
+<p>　　菜单内容1:menu1Content</p>
+<p>　　菜单容量:menuContainer</p>
+<p>　　子菜单:submenu</p>
+<p>　　边导航图标:sidebarIcon</p>
+<p>　　注释:note</p>
+<p>　　面包屑:breadCrumb(即页面所处位置导航提示)</p>
+<p>　　容器:container</p>
+<p>　　内容:content</p>
+<p>　　搜索:search</p>
+<p>　　登陆:login</p>
+<p>　　功能区:shop(如购物车，收银台)</p>
+<p>　　当前的current</p>
+<p>　　2.样式文件命名</p>
+<p>　　主要的:master.css</p>
+<p>　　布局版面:layout.css</p>
+<p>　　专栏:columns.css</p>
+<p>　　文字:font.css</p>
+<p>　　打印样式:print.css</p>
+<p>　　主题:themes.css</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2020/03/15/css%E7%B1%BB%E5%90%8D%E5%91%BD%E5%90%8D%E6%8E%A8%E8%8D%90/" style="float: left;">
+    <a class="pull-left" href="/2020/04/10/uniapp-hbuilder/" style="float: left;">
         ← 深拷贝与浅拷贝
     </a>
     
     
-    <a class="pull-right" href="/2020/01/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F06/">
-        小程序06 →
+    <a class="pull-right" href="/2020/02/14/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D/">
+        深拷贝与浅拷贝 →
     </a>
     
 </nav>

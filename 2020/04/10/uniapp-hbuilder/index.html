@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>深拷贝与浅拷贝 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-04-10T14:44:56.000Z" itemprop="datePublished">
+          2020-04-10
+      </time>
+    
+</span>
+                <h1>深拷贝与浅拷贝</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-安装-scss-sass-编译"><a href="#1-安装-scss-sass-编译" class="headerlink" title="1 安装 scss/sass 编译"></a>1 安装 scss/sass 编译</h3><p>为了方便编写样式（例如：<code>&lt;style lang=&quot;scss&quot;&gt;&lt;/style&gt;</code>），建议安装 <code>scss/sass 编译</code> 插件。插件下载地址：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/plugin?name=compile-node-sass">https://ext.dcloud.net.cn/plugin?name=compile-node-sass</a></p>
+</blockquote>
+<h3 id="2-配置网络请求"><a href="#2-配置网络请求" class="headerlink" title="2 配置网络请求"></a>2 配置网络请求</h3><p>由于平台的限制，小程序项目中<strong>不支持 axios</strong>，而且原生的 <code>wx.request()</code> API 功能较为简单，<strong>不支持拦截器</strong>等全局定制的功能。因此，建议在 uni-app 项目中使用 <code>@escook/request-miniprogram</code> 第三方包发起网络数据请求。</p>
+<blockquote>
+<p>请参考 <strong>@escook/request-miniprogram</strong> 的官方文档进行安装、配置、使用</p>
+</blockquote>
+<blockquote>
+<p>官方文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@escook/request-miniprogramken">https://www.npmjs.com/package/@escook/request-miniprogramken</a></p>
+</blockquote>
+<h4 id="坑：1-Hbuildel分包subPackages-而微信小程序subpackages-小写可以大写"><a href="#坑：1-Hbuildel分包subPackages-而微信小程序subpackages-小写可以大写" class="headerlink" title="坑：1.Hbuildel分包subPackages 而微信小程序subpackages 小写可以大写"></a>坑：1.Hbuildel分包subPackages 而微信小程序subpackages 小写可以大写</h4><h4 id="2-v-show-不能用-使用hidden-或者v-if-v-else-但是hidden只会第一次生效，别用"><a href="#2-v-show-不能用-使用hidden-或者v-if-v-else-但是hidden只会第一次生效，别用" class="headerlink" title="2.v-show 不能用 使用hidden 或者v-if/v-else  ,但是hidden只会第一次生效，别用"></a>2.v-show 不能用 使用hidden 或者v-if/v-else  ,但是hidden只会第一次生效，别用</h4><h4 id="3-在tab栏切换中scroll标签的scrop-top会不能直接等于0-需要变换，不然不会生效"><a href="#3-在tab栏切换中scroll标签的scrop-top会不能直接等于0-需要变换，不然不会生效" class="headerlink" title="3.在tab栏切换中scroll标签的scrop-top会不能直接等于0 需要变换，不然不会生效"></a>3.在tab栏切换中scroll标签的scrop-top会不能直接等于0 需要变换，不然不会生效</h4><ol>
+<li><p>在 data 中定义 <code>滚动条距离顶部的距离</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">// 滚动条距离顶部的距离</span></span><br><span class="line">    scrollTop: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态为右侧的 <code>&lt;scroll-view&gt;</code> 组件绑定 <code>scroll-top</code> 属性的值：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 右侧的滚动视图区域 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">&quot;right-scroll-view&quot;</span> <span class="attr">scroll-y</span> <span class="attr">:style</span>=<span class="string">&quot;&#123;height: wh + &#x27;px&#x27;&#125;&quot;</span> <span class="attr">:scroll-top</span>=<span class="string">&quot;scrollTop&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换一级分类时，动态设置 <code>scrollTop</code> 的值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 选中项改变的事件处理函数</span></span><br><span class="line"><span class="function"><span class="title">activeChanged</span>(<span class="params">i</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.active = i</span><br><span class="line">  <span class="built_in">this</span>.cateLevel2 = <span class="built_in">this</span>.cateList[i].children</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 让 scrollTop 的值在 0 与 1 之间切换</span></span><br><span class="line">  <span class="built_in">this</span>.scrollTop = <span class="built_in">this</span>.scrollTop === <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 可以简化为如下的代码：</span></span><br><span class="line">  <span class="comment">// this.scrollTop = this.scrollTop ? 0 : 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="4-小程序组件自身（没有onLoad"><a href="#4-小程序组件自身（没有onLoad" class="headerlink" title="4.小程序组件自身（没有onLoad)"></a>4.小程序组件自身（没有onLoad)</h4><p>​        created() {<br>​            // 组件实例初始化的时候调用<br>​        },<br>​        attached() {<br>​            // 组件进入页面节点的时候调用，此时数据已经初始化完毕<br>​        },<br>​        detached() {<br>​            // 组件在页面节点移除的时候调用，卸载<br>​        }</p>
+<h4 id="5-小程序中组件所在页面"><a href="#5-小程序中组件所在页面" class="headerlink" title="5.小程序中组件所在页面"></a>5.小程序中组件所在页面</h4><p>Component({<br>    pageLifetimes: {<br>        show() {<br>            // 页面显示的时候调用<br>        },<br>        hide() {<br>            // 页面隐藏的时候调用<br>        },<br>        resize() {<br>            // 页面大小发生改变的时候， 横竖屏切换<br>        },<br>    },<br>});    </p>
+<h4 id="6-应用级别生命周期"><a href="#6-应用级别生命周期" class="headerlink" title="6.应用级别生命周期"></a>6.应用级别生命周期</h4><p> onLaunch(){<br>    // 小程序首次运行的时候触发，触发一次<br>  },<br>  onShow(){<br>    // 小程序显示的时候触发<br>  },<br>  onHide(){<br>    //  小程序隐藏的时候触发 例如切换到后台<br>  },</p>
+<p>  // 以下的是了解<br>  onError(){<br>     // 小程序发生错误的时候触发<br>  },<br>  onPageNotFound(){<br>    // 小程序第一次运行找不到页面的时候触发<br>  }</p>
+<h4 id="7-页面级别"><a href="#7-页面级别" class="headerlink" title="7.页面级别"></a>7.页面级别</h4><p>onLoad(){<br>     // 页面加载的时候调用<br>  },<br>  onShow(){<br>     // 页面显示的时候调用<br>  },<br>  onReady(){<br>     // 页面组件第一次渲染完毕调用<br>  },<br>  onHide(){<br>     // 页面隐藏的时候调用<br>  },<br>  onUnload(){<br>     // 页面卸载的时候调用<br>  }</p>
+<h4 id="8-自定义组件没有方法，不能-click触发点击事件，除非通过组件内通过-emit-传递一个叫click的自定义方法-但是可以：属性，这个属性是传递给组件内的，由props接收"><a href="#8-自定义组件没有方法，不能-click触发点击事件，除非通过组件内通过-emit-传递一个叫click的自定义方法-但是可以：属性，这个属性是传递给组件内的，由props接收" class="headerlink" title="8.自定义组件没有方法，不能@click触发点击事件，除非通过组件内通过$emit 传递一个叫click的自定义方法 但是可以：属性，这个属性是传递给组件内的，由props接收"></a>8.自定义组件没有方法，不能@click触发点击事件，除非通过组件内通过$emit 传递一个叫click的自定义方法 但是可以：属性，这个属性是传递给组件内的，由props接收</h4><h4 id="9-Hbuilder-全局挂载"><a href="#9-Hbuilder-全局挂载" class="headerlink" title="9.Hbuilder 全局挂载"></a>9.Hbuilder 全局挂载</h4><p>在main.js中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import uniIcons from &quot;@&#x2F;components&#x2F;uni-icons&#x2F;uni-icons.vue&quot;</span><br><span class="line">Vue.component(&#39;uniIcons&#39;,uniIcons)</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-webp在ios端不显示"><a href="#10-webp在ios端不显示" class="headerlink" title="10..webp在ios端不显示"></a>10..webp在ios端不显示</h4><h4 id="11-如果在选择收货地址的时候，用户点击了取消授权，则需要进行特殊的处理，否则用户将无法再次选择收货地址！"><a href="#11-如果在选择收货地址的时候，用户点击了取消授权，则需要进行特殊的处理，否则用户将无法再次选择收货地址！" class="headerlink" title="11.如果在选择收货地址的时候，用户点击了取消授权，则需要进行特殊的处理，否则用户将无法再次选择收货地址！"></a>11.如果在选择收货地址的时候，用户点击了<strong>取消授权</strong>，则需要进行<strong>特殊的处理</strong>，否则<strong>用户将无法再次选择收货地址</strong>！</h4><ol>
+<li><p>改造 <code>chooseAddress</code> 方法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 选择收货地址</span></span><br><span class="line">   <span class="keyword">async</span> <span class="function"><span class="title">chooseAddress</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="comment">// 1. 调用小程序提供的 chooseAddress() 方法，即可使用选择收货地址的功能</span></span><br><span class="line">     <span class="comment">//    返回值是一个数组：第1项为错误对象；第2项为成功之后的收货地址对象</span></span><br><span class="line">  <span class="keyword">const</span> [err, succ] = <span class="keyword">await</span> uni.chooseAddress().catch(<span class="function"><span class="params">err</span> =&gt;</span> err)</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// 2. 用户成功的选择了收货地址</span></span><br><span class="line">     <span class="keyword">if</span> (succ &amp;&amp; succ.errMsg === <span class="string">&#x27;chooseAddress:ok&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// 更新 vuex 中的收货地址</span></span><br><span class="line">       <span class="built_in">this</span>.updateAddress(succ)</span><br><span class="line">  &#125;</span><br><span class="line">   </span><br><span class="line">  <span class="comment">// 3. 用户没有授权</span></span><br><span class="line">     <span class="keyword">if</span> (err &amp;&amp; err.errMsg === <span class="string">&#x27;chooseAddress:fail auth deny&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>.reAuth() <span class="comment">// 调用 this.reAuth() 方法，向用户重新发起授权申请</span></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 <code>methods</code> 节点中声明 <code>reAuth</code> 方法如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用此方法，重新发起收货地址的授权</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="title">reAuth</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="comment">// 3.1 提示用户对地址进行授权</span></span><br><span class="line">  <span class="keyword">const</span> [err2, confirmResult] = <span class="keyword">await</span> uni.showModal(&#123;</span><br><span class="line">    content: <span class="string">&#x27;检测到您没打开地址权限，是否去设置打开？&#x27;</span>,</span><br><span class="line">    confirmText: <span class="string">&quot;确认&quot;</span>,</span><br><span class="line">    cancelText: <span class="string">&quot;取消&quot;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.2 如果弹框异常，则直接退出</span></span><br><span class="line">  <span class="keyword">if</span> (err2) <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.3 如果用户点击了 “取消” 按钮，则提示用户 “您取消了地址授权！”</span></span><br><span class="line">  <span class="keyword">if</span> (confirmResult.cancel) <span class="keyword">return</span> uni.$showMsg(<span class="string">&#x27;您取消了地址授权！&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3.4 如果用户点击了 “确认” 按钮，则调用 uni.openSetting() 方法进入授权页面，让用户重新进行授权</span></span><br><span class="line">  <span class="keyword">if</span> (confirmResult.confirm) <span class="keyword">return</span> uni.openSetting(&#123;</span><br><span class="line">    <span class="comment">// 3.4.1 授权结束，需要对授权的结果做进一步判断</span></span><br><span class="line">    success: <span class="function">(<span class="params">settingResult</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 3.4.2 地址授权的值等于 true，提示用户 “授权成功”</span></span><br><span class="line">      <span class="keyword">if</span> (settingResult.authSetting[<span class="string">&#x27;scope.address&#x27;</span>]) <span class="keyword">return</span> uni.$showMsg(<span class="string">&#x27;授权成功！请选择地址&#x27;</span>)</span><br><span class="line">      <span class="comment">// 3.4.3 地址授权的值等于 false，提示用户 “您取消了地址授权”</span></span><br><span class="line">      <span class="keyword">if</span> (!settingResult.authSetting[<span class="string">&#x27;scope.address&#x27;</span>]) <span class="keyword">return</span> uni.$showMsg(<span class="string">&#x27;您取消了地址授权！&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h5 id="解决-iPhone-真机上无法重新授权的问题"><a href="#解决-iPhone-真机上无法重新授权的问题" class="headerlink" title="解决 iPhone 真机上无法重新授权的问题"></a>解决 iPhone 真机上无法重新授权的问题</h5><blockquote>
+<p>问题说明：在 iPhone 设备上，当用户取消授权之后，再次点击选择收货地址按钮的时候，无法弹出授权的提示框！</p>
+</blockquote>
+<ol>
+<li><p>导致问题的原因 - 用户取消授权后，再次点击 “选择收货地址” 按钮的时候：</p>
+<ul>
+<li>在<strong>模拟器</strong>和<strong>安卓真机</strong>上，错误消息 <code>err.errMsg</code> 的值为 <code>chooseAddress:fail auth deny</code></li>
+<li>在 <strong>iPhone 真机</strong>上，错误消息 <code>err.errMsg</code> 的值为 <code>chooseAddress:fail authorize no response</code></li>
+</ul>
+</li>
+<li><p>解决问题的方案 - 修改 <code>chooseAddress</code> 方法中的代码，进一步完善用户没有授权时的 <code>if</code> 判断条件即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="title">chooseAddress</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">     <span class="comment">// 1. 调用小程序提供的 chooseAddress() 方法，即可使用选择收货地址的功能</span></span><br><span class="line">    <span class="comment">//    返回值是一个数组：第1项为错误对象；第2项为成功之后的收货地址对象</span></span><br><span class="line">     <span class="keyword">const</span> [err, succ] = <span class="keyword">await</span> uni.chooseAddress().catch(<span class="function"><span class="params">err</span> =&gt;</span> err)</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 2. 用户成功的选择了收货地址</span></span><br><span class="line">    <span class="keyword">if</span> (succ &amp;&amp; succ.errMsg === <span class="string">&#x27;chooseAddress:ok&#x27;</span>) &#123;</span><br><span class="line">       <span class="built_in">this</span>.updateAddress(succ)</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
+<p>// 3. 用户没有授权<br>  if (err &amp;&amp; (err.errMsg === ‘chooseAddress:fail auth deny’ || err.errMsg === ‘chooseAddress:fail authorize no response’)) {<br> this.reAuth()<br>  }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">以上方法失效，禁止调用api，需要用户自己点击，见下文档</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;developers.weixin.qq.com&#x2F;community&#x2F;develop&#x2F;doc&#x2F;000cea2305cc5047af5733de751008</span><br><span class="line"></span><br><span class="line">#### 12.移动端渐变色不需要-webkit-  背景色是background 设置不是background-color</span><br><span class="line"></span><br><span class="line">background: linear-gradient(left,#555555,#2b4b6b);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="13-解决-iPhone-真机上无法重新授权的问题"><a href="#13-解决-iPhone-真机上无法重新授权的问题" class="headerlink" title="13.解决 iPhone 真机上无法重新授权的问题"></a>13.解决 iPhone 真机上无法重新授权的问题</h4><blockquote>
+<p>问题说明：在 iPhone 设备上，当用户取消授权之后，再次点击选择收货地址按钮的时候，无法弹出授权的提示框！</p>
+</blockquote>
+<ol>
+<li>导致问题的原因 - 用户取消授权后，再次点击 “选择收货地址” 按钮的时候：<ul>
+<li>在<strong>模拟器</strong>和<strong>安卓真机</strong>上，错误消息 <code>err.errMsg</code> 的值为 <code>chooseAddress:fail auth deny</code></li>
+<li>在 <strong>iPhone 真机</strong>上，错误消息 <code>err.errMsg</code> 的值为 <code>chooseAddress:fail authorize no response</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="14-小程序原生tabar右上角角标置为0时有数字，消除数字用wx-removeTabBarBadge"><a href="#14-小程序原生tabar右上角角标置为0时有数字，消除数字用wx-removeTabBarBadge" class="headerlink" title="14.小程序原生tabar右上角角标置为0时有数字，消除数字用wx.removeTabBarBadge(),"></a>14.小程序原生tabar右上角角标置为0时有数字，消除数字用wx.removeTabBarBadge(),</h4><p>wx.setTabBarBadge的text属性必须为字符串</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/11/28/git/" style="float: left;">
+        ← 
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/03/15/css%E7%B1%BB%E5%90%8D%E5%91%BD%E5%90%8D%E6%8E%A8%E8%8D%90/">
+        深拷贝与浅拷贝 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

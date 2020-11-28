@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>深拷贝与浅拷贝 | Hexo</title>
+  <title>Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -173,42 +173,98 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2020-02-14T14:02:53.000Z" itemprop="datePublished">
-          2020-02-14
+      <time datetime="2020-11-28T04:55:09.622Z" itemprop="datePublished">
+          2020-11-28
       </time>
     
 </span>
-                <h1>深拷贝与浅拷贝</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h4 id="1-slice和splice"><a href="#1-slice和splice" class="headerlink" title="1.slice和splice"></a>1.slice和splice</h4><ul>
-<li>slice不会对原数组操作，splice会。</li>
-<li>splice 还可以成为添加操作，不仅仅是删除</li>
-<li>slice()如果数组里面没有引用类型可以作为深拷贝拷贝，否则为浅拷贝，里面的引用类型修改，拷贝之前的引用类型的值会改变 </li>
+      		<h5 id="1-创建本地的开发分支"><a href="#1-创建本地的开发分支" class="headerlink" title="1.创建本地的开发分支"></a>1.创建本地的开发分支</h5><h5 id="2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）"><a href="#2-如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C-Users-Administrator-ssh中（windows）（通常隐藏）" class="headerlink" title="2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）"></a>2.如果公司有自己的git，则去添加ssh秘钥，这个秘钥通常在C:\Users\Administrator.ssh中（windows）（通常隐藏）</h5><h5 id="3-添加的秘钥是-pub结尾的公钥"><a href="#3-添加的秘钥是-pub结尾的公钥" class="headerlink" title="3.添加的秘钥是.pub结尾的公钥"></a>3.添加的秘钥是.pub结尾的公钥</h5><h5 id="4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-111-x75-x72-x5f-101-x6d-x61-105-x6c-64-101-120-x61-109-x70-x6c-x65-x2e-x63-x6f-x6d-“创建新的秘钥"><a href="#4-可以使用ssh-keygen-t-rsa-b-4096-C-“-x79-111-x75-x72-x5f-101-x6d-x61-105-x6c-64-101-120-x61-109-x70-x6c-x65-x2e-x63-x6f-x6d-“创建新的秘钥" class="headerlink" title="4.可以使用ssh-keygen -t rsa -b 4096 -C “&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;“创建新的秘钥"></a>4.可以使用ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“创建新的秘钥</h5><h5 id="5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库"><a href="#5-其-中passphrase为该秘钥的密码（引文），如果为空，就没有密码-免密clone-git仓库" class="headerlink" title="5.其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库"></a>5.<code>其``中passphrase为该秘钥的密码（引文），如果为空，就没有密码--免密clone git仓库</code></h5><blockquote>
+<p>场景一.</p>
+<ul>
+<li>使用git切换到最新的代码分支，使用git pull拉取最新代码，git完整代码为git pull oringin master</li>
+<li>下载同事的新代码<br>git fetch origin newremote：newlocal<br>newremote远程分支的名字 mewlocal本地分支的名字<br>使用git checkout 切换到自己的本地分支<br>使用git merge合并本地的其他分支到当前分支<br>这是git vim编辑器 如果要编辑这个内容 请输入o：换行<br>i：自接进入<br>输出esc 退出编辑状态<br>输入：wq 保存当前记录</li>
+<li>：q！不保存</li>
+<li>d n d 删除n行数据（未进入编辑模式）</li>
+<li>git clone 命令只使用一次，下载仓库，创建与远程分支的联系<br>使用git remote -v查看与远程分支的联系<br><code>一定要主要git仓库的文件件夹中打开当前目录，确保gitbash上面有分支的提示</code></li>
 </ul>
-<h4 id="2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"><a href="#2-Object-assign-是浅拷贝，拷贝的对象修改了值，原对象会相应改变。" class="headerlink" title="2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。"></a>2.Object.assign()是浅拷贝，拷贝的对象修改了值，原对象会相应改变。</h4><h4 id="3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"><a href="#3-直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝" class="headerlink" title="3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝"></a>3.直接赋值操作，如果是基本类型就是深拷贝，如果是引用类型就是浅拷贝</h4><h4 id="4，…剩余参数-解构赋值的方式等同于slice"><a href="#4，…剩余参数-解构赋值的方式等同于slice" class="headerlink" title="4，…剩余参数 解构赋值的方式等同于slice"></a>4，…剩余参数 解构赋值的方式等同于slice</h4><h4 id="5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined"><a href="#5-深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton-和undefined" class="headerlink" title="5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,"></a>5.深拷贝有JSON序列化反序列化得到的Json对象，但是不能对有funciton 和undefined,</h4><h4 id="是function，undefined会忽略"><a href="#是function，undefined会忽略" class="headerlink" title="是function，undefined会忽略"></a>是function，undefined会忽略</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.如果json里面有时间对象，则序列化结果：时间对象&#x3D;&gt;字符串的形式；</span><br><span class="line">2.如果json里有RegExp、Error对象，则序列化的结果将只得到空对象 RegExp、Error &#x3D;&gt; &#123;&#125;；</span><br><span class="line">3.如果json里有 function,undefined，则序列化的结果会把 function,undefined 丢失；</span><br><span class="line">4.如果json里有NaN、Infinity和-Infinity，则序列化的结果NaN,Infinity和-Infinity会变成null；</span><br><span class="line">5.如果json里有对象是由构造函数生成的，则序列化的结果会丢弃对象的 constructor；</span><br><span class="line">6.如果对象中存在循环引用的情况也无法实现深拷贝</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝"><a href="#6，深拷贝还有lodash的cloneDeep-利用回调写的深拷贝" class="headerlink" title="6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝"></a>6，深拷贝还有lodash的cloneDeep,利用回调写的深拷贝</h4><h4 id="7-回调封装深拷贝"><a href="#7-回调封装深拷贝" class="headerlink" title="7.回调封装深拷贝"></a>7.回调封装深拷贝</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">const a&#x3D;[1,[2,3],&#123;</span><br><span class="line"> name:&#39;zs&#39;,</span><br><span class="line"> gender:&#39;女&#39;,</span><br><span class="line"> arr:[5,6,7]</span><br><span class="line">&#125;]</span><br><span class="line">const b&#x3D;</span><br><span class="line"> &#123;</span><br><span class="line">   name: &#39;zs&#39;,</span><br><span class="line">    gender: &#39;女&#39;,</span><br><span class="line">    arr: [5, 6, 7,[4,5]]</span><br><span class="line">  &#125;</span><br><span class="line">function cloneDeep(target)&#123;</span><br><span class="line"> let obj&#x3D;&#123;&#125;</span><br><span class="line"> if(target instanceof Array)&#123;</span><br><span class="line">  &#x2F;&#x2F; console.log(target instanceof Array);</span><br><span class="line">  &#x2F;&#x2F; console.log(Array.isArray(target));</span><br><span class="line">  obj&#x3D;[]</span><br><span class="line">  target.forEach((v,i)&#x3D;&gt;&#123;</span><br><span class="line">   obj[i]&#x3D;cloneDeep(v)</span><br><span class="line">  &#125;)</span><br><span class="line"> &#125;else if(target instanceof Object)&#123;</span><br><span class="line">  obj&#x3D;&#123;&#125;</span><br><span class="line">  for (k in target)&#123;</span><br><span class="line">   obj[k]&#x3D;cloneDeep(target[k])</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">  obj&#x3D;target</span><br><span class="line"> &#125;</span><br><span class="line"> return obj</span><br><span class="line">&#125;</span><br><span class="line">let d&#x3D;cloneDeep(a)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 48 ~ d&#39;, d)</span><br><span class="line">console.log(&#39;a&#39;,a)</span><br><span class="line">d[1][0]&#x3D;3123123</span><br><span class="line">console.log(&#39;修改后的a&#39;,a)</span><br><span class="line">console.log(&#39;修改后的d&#39;,d)</span><br><span class="line">let c&#x3D;cloneDeep(b)</span><br><span class="line">console.log(&#39;🚀 ~ file: 深拷贝.html ~ line 55 ~ c&#39;, c)</span><br><span class="line">console.log(&#39;b&#39;,b);</span><br><span class="line">c.arr[0]&#x3D;&#39;dasdasd&#39;</span><br><span class="line">console.log(&#39;修改后的c&#39;, c)</span><br><span class="line">console.log(&#39;修改后的b&#39;, b)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>​     </p>
+</blockquote>
+<blockquote>
+<p>场景二.已有代码的情况</p>
+<ul>
+<li><p>使用vue create命令会默认初始化一个本地的git仓库</p>
+</li>
+<li><p>使用git remote add oringin 仓库地址 回车执行</p>
+</li>
+<li><p>使用git add . 和git commit -m “ ”进行初次的提交</p>
+</li>
+<li><p>远程分支必须存在主干分支，才能创建其他分支</p>
+</li>
+<li><p>oringin是远程仓库的别名</p>
+</li>
+<li><p>使用git config 来配置默认的提交用户</p>
+</li>
+<li><p>git config user.name</p>
+</li>
+<li><p>git config user.email</p>
+</li>
+<li><p>使用git config –global 全局配置默认提交的用户</p>
+</li>
+<li><p>如果使用vue-cli创建的仓库会默认git init</p>
+</li>
+</ul>
+</blockquote>
+<h5 id="6-git仓库是无穷无尽的后悔药"><a href="#6-git仓库是无穷无尽的后悔药" class="headerlink" title="6.git仓库是无穷无尽的后悔药"></a>6<code>.git仓库是无穷无尽的后悔药</code></h5><ul>
+<li>使用git reflog 查看本地的提交记录</li>
+<li>使用git reset –hard  记录id 到那个hash记录</li>
+<li>未提交的文件不能进行追回</li>
+</ul>
+<h5 id="7-缓存区，暂存区，本地仓库"><a href="#7-缓存区，暂存区，本地仓库" class="headerlink" title="7.缓存区，暂存区，本地仓库"></a>7.<code>缓存区，暂存区，本地仓库</code></h5><ul>
+<li>git reset 会清空本地暂存区的文件，是文件不可恢复</li>
+<li>使用git stash缓存不想提交的本地文件 该文件需是已跟踪的文件（已经commit）</li>
+<li>使用git stash list 查看本地<code>跟踪``暂存``未提交</code>的项目</li>
+<li>使用git stash apply恢复最近一条暂存记录（注意：本地存在未提交的更改，不能使用此命令）</li>
+<li>git stash命令不是必须使用，而是临时使用</li>
+<li>如果有不想提交的文件内容，有2中方案，用git reset 命令</li>
+<li>git restore –staged 文件名 恢复到暂存区 如果是老版本 使用git checkout 文件名，如果不记得使用git status进行查看 </li>
+</ul>
+<h5 id="8-分支"><a href="#8-分支" class="headerlink" title="8.分支"></a>8.分支</h5><ul>
+<li>git frech获取远程更新，但是不会合并到本地分支。</li>
+<li>通过git fetch origin newremote：newlocal下载最新代码</li>
+<li>git branch -D 删除本地分支</li>
+<li>git push origin ：dev 删除分支</li>
+</ul>
+<h5 id="9-开发工作流"><a href="#9-开发工作流" class="headerlink" title="9.开发工作流"></a>9.开发工作流</h5><p><code>开发完成提交到git仓库，git仓库触发自动化流程，进行编译测试打包发布，接下来交由测试人员进行测试，然后提交到缺陷控制平台jira 或禅道，然后进行修复，然后把修护好的代码提交git，然后...，以此往复，直到发布上线。</code></p>
+<h5 id="10-持续集成的环节包括规划，编码，测试-构建，发布，部署，运维，监控。"><a href="#10-持续集成的环节包括规划，编码，测试-构建，发布，部署，运维，监控。" class="headerlink" title="10.持续集成的环节包括规划，编码，测试,构建，发布，部署，运维，监控。"></a>10.持续集成的环节包括规划，编码，测试,构建，发布，部署，运维，监控。</h5><blockquote>
+<ol>
+<li>学会创建仓库，分支，提交代码</li>
+<li>学会回退代码</li>
+<li>学会合并远程分支的新的内容</li>
+<li>学会status, reflog, stash, remote, branch, add, commit, reset, push, pull 命令</li>
+</ol>
+</blockquote>
+<h5 id="11-git-rm-–cached-r-文件-删除本地暂存区文件，为了保证-gitignore生效"><a href="#11-git-rm-–cached-r-文件-删除本地暂存区文件，为了保证-gitignore生效" class="headerlink" title="11.git rm –cached -r  文件 删除本地暂存区文件，为了保证.gitignore生效"></a>11.git rm –cached -r  文件 删除本地暂存区文件，为了保证.gitignore生效</h5><h5 id="12-如果在gitignore文件没有生效，直接执行git-rm-–cached-r-文件-然后-git-add-git-commit-代码-使ignore生效"><a href="#12-如果在gitignore文件没有生效，直接执行git-rm-–cached-r-文件-然后-git-add-git-commit-代码-使ignore生效" class="headerlink" title="12.如果在gitignore文件没有生效，直接执行git rm –cached -r 文件 然后 git add  .  git commit 代码 使ignore生效"></a>12.如果在gitignore文件没有生效，直接执行git rm –cached -r 文件 然后 git add  .  git commit 代码 使ignore生效</h5><h5 id="13-rm-代表删除-–cached-缓存-r递归-全部"><a href="#13-rm-代表删除-–cached-缓存-r递归-全部" class="headerlink" title="13.rm 代表删除 –cached 缓存 -r递归 .全部"></a>13.rm 代表删除 –cached 缓存 -r递归 .全部</h5><h5 id="14-git-remote-set-url-oringin-远程仓库的地址"><a href="#14-git-remote-set-url-oringin-远程仓库的地址" class="headerlink" title="14.git remote set-url oringin 远程仓库的地址"></a>14.git remote set-url oringin 远程仓库的地址</h5><ul>
+<li>当仓库地址发生变化使用该命令，origin只是远程仓库的别名</li>
+<li>使用git status查看git仓库的仓库</li>
+</ul>
+<blockquote>
+<p>情景三 </p>
+<p>如果和其他小伙伴同事开发一个功能，约定修改的函数名称，文件名称，各自完成的功能，解决冲突的办法是各自开发各自功能</p>
+<p>情景四 本地有代码，远程无仓库</p>
+</blockquote>
+<h5 id="15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）"><a href="#15-强制推送-git-push-origin-dev-f-（比如后面提交代码有问题，先进行git-reset-进行先前的提交，在使用这个命令进行覆盖）" class="headerlink" title="15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）"></a>15.强制推送 -git push origin dev -f （比如后面提交代码有问题，先进行git reset 进行先前的提交，在使用这个命令进行覆盖）</h5><h5 id="16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"><a href="#16-git-add-后面不仅可以添加-添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。" class="headerlink" title="16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。"></a>16.git add 后面不仅可以添加.添加所以文件，也可以添加单个文件名添加单个文件，还可以接文件目录。</h5><h5 id="17-git-diff"><a href="#17-git-diff" class="headerlink" title="17.git diff"></a>17.git diff</h5><h5 id="18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录"><a href="#18-git-reflog可以看到删除的记录-，git-log-看不到删除后的记录，git-reflog为本地log操作的记录" class="headerlink" title="18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录"></a>18.git reflog可以看到删除的记录 ，git log 看不到删除后的记录，git reflog为本地log操作的记录</h5><h5 id="19-git-rebase合并先前不用的提交，让我们提交记录保持干净"><a href="#19-git-rebase合并先前不用的提交，让我们提交记录保持干净" class="headerlink" title="19.git rebase合并先前不用的提交，让我们提交记录保持干净"></a>19.git rebase合并先前不用的提交，让我们提交记录保持干净</h5><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201105114808590.png" alt="image-20201105114808590"></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2020/03/15/css%E7%B1%BB%E5%90%8D%E5%91%BD%E5%90%8D%E6%8E%A8%E8%8D%90/" style="float: left;">
-        ← 深拷贝与浅拷贝
-    </a>
     
-    
-    <a class="pull-right" href="/2020/01/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F06/">
-        小程序06 →
+    <a class="pull-right" href="/2020/04/10/uniapp-hbuilder/">
+        深拷贝与浅拷贝 →
     </a>
     
 </nav>
