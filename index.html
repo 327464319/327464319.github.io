@@ -205,6 +205,103 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2020/07/11/浏览器渲染机制/浏览器渲染机制/">浏览器渲染机制</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-07-11T13:05:22.000Z" itemprop="datePublished">
+          2020-07-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+1.当你输入url时，如果输入的是内容，则ui线程会捕捉你的内容，使用默认配置的搜索引擎进行搜索，如果输入的是网址，ui线程会启动网络线程，去获取数据，获取到数据后，ui线程会创建一个渲染线程，线程的数据是独立的，浏览器线程通过ipc管道将数据传递给渲染器线程，进行渲染。
+2.渲染器接收到的数据也就是html，渲染器进程的核心任务就是把html,css,图片，解析成用户可以交互的web页面，构造dom数据结构，dom也就是文档对象模型
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/07/11/浏览器渲染机制/浏览器渲染机制/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/06/14/js的一些api记录/">js的一些api记录</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-06-14T12:05:34.000Z" itemprop="datePublished">
+          2020-06-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        getBoundingClientRect():
+　　这个方法返回一个矩形对象，包含四个属性：left、top、right和buttom。分别表示元素各边与页面各边的距离
+例如：
+var boxPosition = document.getElementById(‘box’);         // 获取元素
+alert(box.getBoundingClientRect().top);         // 元素上边距离页面上边的距离
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/06/14/js的一些api记录/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/06/14/css/">css的一些api记录</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-06-14T12:02:53.000Z" itemprop="datePublished">
+          2020-06-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        为什么行内元素不能设置margin-top/margin-bottom/padding-top/padding-bottom?
+刘久江 2018-07-18 19:28:04  712  收藏版权HTML 里的元素分为替换元素（replaced element）和非替换元素（non-replaced element）。-?替换元素是指用作为其他内容占位符的一个元素。最典型的就是img，它只是指向一个图像文件。以及大多数表单元素也是替换，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/06/14/css/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2020/05/19/git/">git的一些操作</a></h3>
                     <span>
                         <span class="post-meta">
@@ -486,116 +583,6 @@ slice()如果数组里面没有引用类型可以作为深拷贝拷贝，否则�
                     
                     <p class="pull-right readMore">
                         <a href="/2020/01/06/小程序04/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/01/04/小程序03/">小程序03</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-01-04T07:22:33.000Z" itemprop="datePublished">
-          2020-01-04
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        小程序-Day03 总结网络请求（⭐⭐⭐）小程序中对网络请求校验是非常严格的，请求的协议必须是 https 协议域名需要在后台进行配置（合法域名）在开发期间可能线上服务器还没有弄好，此时是测试服务器，我们可以通过微信开发工具，详情 -&gt; 本地设置 -&gt; 勾选上不校验合法域名； 项目上线还是必须要在 后台进行配置
-语法：
-12345678910111213141516wx.request(&#123;    url: &#x2
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/01/04/小程序03/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/01/03/小程序02/">小程序02</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-01-03T08:55:12.000Z" itemprop="datePublished">
-          2020-01-03
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        小程序-Day02 总结发布（⭐⭐）小程序发布流程 项目负责人
-
-借助微信开发工具，找到 上传按钮（工具 -&gt; 上传）
-在后台的 版本管理里面 -&gt; 开发版本 看到我们最近上传的一次代码
-我们可以设置体验版本
-申请 审核 微信团队进行审核
-审核通过之后就可以发布了
-
-事件如何绑定事件（⭐⭐⭐）以 bind 开头绑定事件（没有 click 事件与之代替是 tap 事件）
-
-在 wxml 里面 bind 绑定
-
-1&lt;vie
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/01/03/小程序02/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2020/01/01/小程序01/">小程序01</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2020-01-01T13:22:43.000Z" itemprop="datePublished">
-          2020-01-01
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        今天总结小程序与 PC 开发的区别（⭐⭐）核心的区别 运行环境不同pc 运行环境在浏览器小程序 运行环境在微信环境不同导致 api 不一致
-如何创建一个小程序（⭐⭐⭐）
-注册公众号平台的账户 （年满 18 岁）
-需要拿到 appID 后台 -&gt; 开发 -&gt; 开发设置 -&gt; appID
-不要勾选 云开发
-
-小程序的包结构（⭐⭐⭐）components 存放组件的pages 目录： 存放页面的utils 目录： 存放工具 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2020/01/01/小程序01/">Read More...</a>
                     </p>
                     
                 </div>
